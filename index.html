@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solar Relic RPG</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hero">
+        <p class="eyebrow">Browser fantasy RPG</p>
+        <h1>Solar Relic</h1>
+        <p class="lead">精霊術で謎を解き、ターン制バトルを戦うレトロ風ブラウザRPG。</p>
+      </section>
+
+      <section class="hud" aria-label="冒険者ステータス">
+        <div><span>HP</span><strong id="hp">32 / 32</strong></div>
+        <div><span>EP</span><strong id="ep">14 / 14</strong></div>
+        <div><span>Relics</span><strong id="relics">0 / 8</strong></div>
+        <div><span>LV</span><strong id="level">1</strong></div>
+        <div><span>XP</span><strong id="xp">0 / 12</strong></div>
+        <div><span>Potions</span><strong id="potions">2</strong></div>
+        <div><span>Area</span><strong id="area">神殿</strong></div>
+        <div><span>Mode</span><strong id="mode">Field</strong></div>
+      </section>
+
+      <canvas id="game" width="768" height="512" aria-label="Solar Relic game area"></canvas>
+
+      <section class="command-panel" aria-label="ゲーム操作">
+        <button id="actionButton" type="button">調べる / 決定</button>
+        <button id="spellButton" type="button">精霊術</button>
+        <button id="potionButton" type="button">ポーション</button>
+        <button id="saveButton" type="button">セーブ</button>
+        <button id="loadButton" type="button">ロード</button>
+        <button id="resetButton" type="button">リセット</button>
+      </section>
+
+      <p id="message" class="message" role="status">矢印キー / WASDで移動。石碑の前で「調べる」。</p>
+      <details class="help">
+        <summary>遊び方</summary>
+        <ul>
+          <li>フィールド: 矢印キー / WASDで移動、Space / Enterで調べます。</li>
+          <li>精霊術: Eキーまたはボタンで「ルーメン」を使い、ひび割れた岩を開けます。</li>
+          <li>バトル: 1で攻撃、2で術、3で癒し、4でポーション。宝箱を集め、セーブしながら8つの太陽遺物を探します。</li>
+        </ul>
+      </details>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
